@@ -48,7 +48,7 @@ UICorner.Parent = MainFrame
 
 Header.Name = "Header"
 Header.Parent = MainFrame
-Header.BackgroundColor3 = Color3.fromRGB(81, 0, 255)
+Header.BackgroundColor3 = Color3.fromRGB(15, 180, 70)
 Header.Size = UDim2.new(0, 643, 0, 40)
 Header.Font = Enum.Font.Ubuntu
 Header.Text = "Character manipulation"
