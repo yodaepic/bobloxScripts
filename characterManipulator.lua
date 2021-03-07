@@ -178,7 +178,7 @@ RemoveLegs.TextWrapped = true
 RemoveLegs.MouseButton1Click:Connect(function()
     for i, v in pairs(game:GetService('Players').LocalPlayer.Character:GetChildren()) do
         wait()
-        if v.Name == 'Left Leg' or v.Name == 'Right Leg' then
+        if v.Name == 'Left Leg' or v.Name == 'Right Leg' or v.Name == 'LeftLowerLeg' or v.Name == 'LeftUpperLeg' or v.Name == 'LeftFoot' or v.Name == 'RightFoot' or v.Name == 'RightLowerLeg' or v.Name == 'RightUpperLeg' then
             v:Destroy()
         end
     end
@@ -199,7 +199,7 @@ RemoveArms.TextWrapped = true
 RemoveArms.MouseButton1Click:Connect(function()
     for i, v in pairs(game:GetService('Players').LocalPlayer.Character:GetChildren()) do
         wait()
-        if v.Name == 'Left Arm' or v.Name == 'Right Arm' then
+        if v.Name == 'Left Arm' or v.Name == 'Right Arm' or v.Name == 'LeftLowerArm' or v.Name == 'LeftUpperArm' or v.Name == 'RightHand' or v.Name == 'LeftHand' or v.Name == 'RightLowerArm' or v.Name == 'RightUpperArm' then
             v:Destroy()
         end
     end
