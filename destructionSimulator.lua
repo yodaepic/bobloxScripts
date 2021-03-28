@@ -23,21 +23,16 @@ getgenv().autoSellEnabled = false
 
 -- Functions:
 local function rocketCooldown()
-    if game:GetService('Players').Backpack:FindFirstChild('Launcher') then
-        local rocketLauncherModule = require(game:GetService('Players').Backpack:WaitForChild('Launcher', 1).Stats)
-        rocketLauncherModule['Cooldown'] = 0
-    else
-        warn('--------------------\nPlease unequip the tool you are trying to modify\n--------------------')
-    end
+    if not game.Players.LocalPlayer.Backpack:FindFirstChild('Launcher') then warn('please unequip your tool before using it.') end
+    local rocketLauncherModule = require(game:GetService('Players').Backpack:WaitForChild('Launcher', 1).Stats)
+    rocketLauncherModule['Cooldown'] = 0
 end
 local function bombCooldown()
-    if game:GetService('Players').Backpack:FindFirstChild('Bomb') then
-        local bombModule = require(game:GetService('Players').Backpack:WaitForChild('Bomb', 1).Stats)
-        bombModule['Cooldown'] = 0
-    else
-        warn('--------------------\nPlease unequip the tool you are trying to modify\n--------------------')
-    end
+    if not game.Players.LocalPlayer.Backpack:FindFirstChild('Bomb') then warn('please unequip your tool before using it.') end
+    local bombModule = require(game:GetService('Players').Backpack:WaitForChild('Bomb', 1).Stats)
+    bombModule['Cooldown'] = 0
 end
+
 local function autosell()
     if getgenv().autoSellEnabled == false then
         getgenv().autoSellEnabled = true
